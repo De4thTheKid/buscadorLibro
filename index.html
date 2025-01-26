@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Libros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- Contenido -->
+    <div class="content">
+      <!-- Logo y mensaje -->
+      <div class="logo">
+        <h1><a href="#"><img src="https://p.w3layouts.com/demos/404_error_page/web/images/logo.png" /></a></h1>
+        <span><img src="https://p.w3layouts.com/demos/404_error_page/web/images/signal.png" />Oops! The Page you
+          requested was not found!</span>
+      </div>
+
+      <!-- Barra de búsqueda -->
+      <div class="buttom">
+        <div class="seach_bar">
+          <p>You can go to <span><a href="#">home</a></span> page or search here</p>
+          <!-- Caja de búsqueda -->
+          <div class="search_box">
+            <form id="search-form">
+              <!-- Selector -->
+              <select id="search-type" class="styled-select" required>
+                <option value="title" selected>Título</option>
+                <option value="author">Autor</option>
+                <option value="isbn">ISBN</option>
+              </select>
+              <!-- Input de texto -->
+              <input type="text" id="search-input" placeholder="Ingresa tu búsqueda" onfocus="this.value = '';"
+                onblur="if (this.value == '') {this.value = 'Ingresa tu búsqueda';}" required />
+              <input type="submit" value="" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- Contenedor de resultados -->
+      <div id="results-container">
+        <h2 id="search-count" style="color: white; text-align: center;"></h2>
+        <div id="results" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;"></div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button id="load-more" style="display: none; padding: 10px 20px; font-size: 16px;">Cargar más</button>
+        </div>
+    </div>
+    
+
+    </div>
+  </div>
+
+  <!-- Script para la búsqueda -->
+  <script src="app.js"></script>
+</body>
+
+</html>
